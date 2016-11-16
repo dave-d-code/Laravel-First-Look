@@ -13,6 +13,32 @@
 
 Route::get('/', function()
 {
+	// making a table database schema on the fly. Dumb question. does this keep making tables?
+	// Answer yes, code to run once only. Only for cases of dynamics tables required. Hence will be
+	// commented out.
+
+/*
+	Schema::create('art', function($newtable)
+	{
+		$newtable->increments('id'); // auto increment. where is primary key?
+		$newtable->string('artist'); // makes VARCHAR(255)
+		$newtable->string('title', 500); //makes VARCHAR(500)
+		$newtable->text('description'); // make text
+		$newtable->date('created'); // date format
+		$newtable->date('exhibition_date');
+		$newtable->timestamps(); // creates 2 columns. when created, when updated
+	});
+
+*/
+
+	// altering the above table
+/*
+	Schema::table('art', function($newtable)
+	{
+		$newtable->boolean('alumni');
+		$newtable->dropColumn('exhibition_date');
+	});
+*/
 	return View::make('hello');
 });
 

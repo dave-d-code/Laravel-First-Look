@@ -1,5 +1,11 @@
 ## Laravel PHP Framework
 
+Personal Project. Time to say Goodbye to CodeIgniter for now and do what the cool kids are doing and look 
+at Laravel. 
+I will start with 4.2 to learn the basics of the framework, before learning the new structure of Laravel 5.
+This project is just dabbling with the framework to see what it can do.
+
+
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
