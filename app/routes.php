@@ -39,8 +39,31 @@ Route::get('/', function()
 		$newtable->dropColumn('exhibition_date');
 	});
 */
-	return View::make('hello');
-});
+
+	// try to insert data into the painting table
+
+/*
+	$painting = new Painting;
+	$painting->title = "Do No Wrong";
+	$painting->artist = "D. DoRight";
+	$painting->year = 2016;
+	$painting->save(); // like CI CRUD, this writes to the table.
+
+*/
+
+	// try to get data out of the database
+	// find the data object w/ id of 1
+
+	$painting = Painting::find(1);
+	// amend the title in the row
+	$painting->title = 'Do no wrong, just do Right';
+	$painting->save();
+	return $painting->title;
+
+	// DAMMIT, THEY ARE CUTTING OUT SQL. NOTHING WRONG WITH SQL.  COMPLEX SQL IS EASIER WITH ACTUAL SQL
+
+	// return View::make('hello');
+}); // end of main Route instance object
 
 Route::get('about', function()
 {
