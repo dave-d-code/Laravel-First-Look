@@ -54,15 +54,17 @@ Route::get('/', function()
 	// try to get data out of the database
 	// find the data object w/ id of 1
 
-	$painting = Painting::find(1);
-	// amend the title in the row
-	$painting->title = 'Do no wrong, just do Right';
-	$painting->save();
-	return $painting->title;
+	// $painting = Painting::find(1);
+	// // amend the title in the row
+	// $painting->title = 'Do no wrong, just do Right';
+	// $painting->save();
+	// return $painting->title;
 
 	// DAMMIT, THEY ARE CUTTING OUT SQL. NOTHING WRONG WITH SQL.  COMPLEX SQL IS EASIER WITH ACTUAL SQL
 
-	// return View::make('hello');
+	return View::make('hello', array('theLocation' => 'Plovdiv')); 
+	// note this has gone to the blade template, overriding the original hello.php view
+	// like CI, passing arguments in an associative array
 }); // end of main Route instance object
 
 Route::get('about', function()
