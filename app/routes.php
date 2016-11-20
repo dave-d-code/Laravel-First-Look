@@ -62,13 +62,18 @@ Route::get('/', function()
 
 	// DAMMIT, THEY ARE CUTTING OUT SQL. NOTHING WRONG WITH SQL.  COMPLEX SQL IS EASIER WITH ACTUAL SQL
 
-	return View::make('hello', array('theLocation' => 'Plovdiv')); 
+	// add an array for blade template loops
+	$theLandmarks = array('St. Mary', 'Brooklyn heights', 'Central Park', 'Times Square');
+
+	return View::make('hello', array('theLocation' => 'Plovdiv', 'theWeather' => 'stormy', 'theLandmarks' => $theLandmarks)); 
 	// note this has gone to the blade template, overriding the original hello.php view
 	// like CI, passing arguments in an associative array
 }); // end of main Route instance object
 
+
 Route::get('about', function()
 {
+
 	return 'About content goes here';
 });
 
