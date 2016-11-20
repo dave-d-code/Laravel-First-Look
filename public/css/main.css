@@ -7,3 +7,27 @@
 .bladeloops {
 	text-align: left;
 }
+
+label {
+	display: block;
+	padding-top: 1em;
+}
+
+input[type="submit"] {
+	display: block;
+	margin-top: 2em;
+}
+
+textarea {
+	display: block;
+	margin-bottom: 1em;
+}
+
+input[type="checkbox"] {
+	display: inline-block;
+	margin-top: 1em;
+}
+
+label[for="agree"] {
+	display: inline;
+}

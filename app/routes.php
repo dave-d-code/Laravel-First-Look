@@ -91,3 +91,18 @@ Route::get('about/classes/{theSubject}', function($theSubject)
 {
 	return "content inside {$theSubject} classes goes here.";
 });
+
+// new Routes for blade template forms
+
+Route::get('signup', function()
+{
+	$test = "Here I am";
+	//return "I hear you bro";
+	return View::make('signup');
+});
+// dealing with post data
+Route::post('thanks', function()
+{
+	$theEmail = Input::get('email');
+	return View::make('thanks')->with('theEmail', $theEmail);
+});
